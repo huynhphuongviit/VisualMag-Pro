@@ -1,0 +1,31 @@
+<template>
+  <section class="business">
+    <HeaderSection name="News" nuxtlink="https://demo.wpenjoy.com/visualmag-pro/category/news/"></HeaderSection>
+    <MediumContent :data="data"></MediumContent>
+  </section>
+</template>
+
+<script>
+import MediumContent from './MediumContent.vue';
+import HeaderSection from './HeaderSection.vue';
+import {dataBusiness} from '../store/dataHomePage'
+export default {
+  data(){
+    let data = dataBusiness
+    return{
+      data,
+    }
+  },
+  component: {
+    MediumContent,
+    HeaderSection,
+  }
+};
+</script>
+<style>
+.business {
+  width: 100%;
+  margin: 40px 0;
+}
+
+</style>

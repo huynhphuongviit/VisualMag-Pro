@@ -1,18 +1,18 @@
 <template>
-  <div>
-    <header class="header__pc">
-      <b-navbar toggleable="lg" class="d-flex justify-content-between">
+  <header>
+    <div class="header__pc">
+      <b-navbar class="d-flex justify-content-between">
         <img
           alt=""
           src="https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2023/02/logo-1.png"
         />
         <div class="d-flex justify-content-between">
           <b-navbar-nav>
-            <b-nav-item href="link.link" v-for="link in links" key="index">{{
-              link.name
-            }}</b-nav-item>
+            <b-nav-item href="link.link" v-for="link in links" key="index">
+              <NuxtLink :to="link.nuxtlink">{{ link.name }}</NuxtLink>
+            </b-nav-item>
           </b-navbar-nav>
-          <div
+          <b-navbar-nav
             class="d-flex search__container justify-content-center align-items-center"
           >
             <b-nav-form>
@@ -24,12 +24,12 @@
                 <img src="../static/assets/icon-search.png" alt="" />
               </b-button>
             </b-nav-form>
-          </div>
+          </b-navbar-nav>
         </div>
       </b-navbar>
-    </header>
+    </div>
     <HeaderMobile></HeaderMobile>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -37,14 +37,37 @@ import HeaderMobile from "../components/HeaderMobile.vue";
 export default {
   data: () => {
     let links = [
-      { name: "Home", link: "#" },
-      { name: "Advertising", link: "" },
-      { name: "Blogging", link: "" },
-      { name: "Marketing", link: "" },
-      { name: "Social", link: "" },
-      { name: "SEO", link: "" },
-      { name: "Web Design", link: "" },
-      { name: "Tech", link: "" },
+      { name: "Home", nuxtlink: "#" },
+      {
+        name: "Advertising",
+        nuxtlink:
+          "https://demo.wpenjoy.com/visualmag-pro/category/advertising/",
+      },
+      {
+        name: "Blogging",
+        nuxtlink: "https://demo.wpenjoy.com/visualmag-pro/category/blogging/",
+      },
+      {
+        name: "Marketing",
+        nuxtlink: "https://demo.wpenjoy.com/visualmag-pro/category/marketing/",
+      },
+      {
+        name: "Social",
+        nuxtlink:
+          "https://demo.wpenjoy.com/visualmag-pro/category/social-media/",
+      },
+      {
+        name: "SEO",
+        nuxtlink: "https://demo.wpenjoy.com/visualmag-pro/category/seo/",
+      },
+      {
+        name: "Web Design",
+        nuxtlink: "https://demo.wpenjoy.com/visualmag-pro/category/web-design/",
+      },
+      {
+        name: "Tech",
+        nuxtlink: "https://demo.wpenjoy.com/visualmag-pro/category/technology/",
+      },
     ];
     return {
       links,
@@ -75,14 +98,23 @@ header img {
   margin-left: auto !important;
   margin-right: auto !important;
   padding: 0;
+  height: 46px;
 }
+
 .navbar-nav {
-  margin-right: 20px;
+  margin-right: 19px;
 }
+.navbar-nav .nav-item {
+  margin-right: 3px;
+}
+
 .navbar-light .navbar-nav .nav-link {
   color: #000;
-  padding: 10px 12px;
-  font-size: 17px;
+  padding: 10px 10.44px;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 26px;
 }
 .form-inline {
   width: 200px;
@@ -112,14 +144,19 @@ header img {
   width: 16px;
   transform: rotate(90deg);
 }
+@media screen and (min-width: 960px) {
+  .search__container {
+    margin-right: 0;
+  }
+}
 @media screen and (max-width: 960px) {
   .header__pc {
     display: none;
   }
 }
 @media screen and (max-width: 1180px) {
-  .header__pc nav > div > div{
-    display: none!important;;
+  .header__pc nav > div > div {
+    display: none !important;
   }
 }
 </style>

@@ -1,0 +1,66 @@
+<template>
+  <section class="bigcontent__body">
+    <a :href="data.nuxtlink">
+      <img :src="data.src" alt="" />
+    </a>
+    <div class="bigcontent__body__content">
+      <div class="content__info d-flex align-items-center">
+        <h2>{{ data.name }}</h2>
+        <time>{{ data.time }}</time>
+      </div>
+      <h3>
+        <a :href="data.nuxtlink">{{ data.title }}</a>
+      </h3>
+    </div>
+    <h4 v-if="data.description">
+      {{ data.description }}
+    </h4>
+  </section>
+</template>
+
+<script>
+export default {
+  props: ["data"],
+};
+</script>
+<style>
+.bigcontent__body {
+  padding-top: 16px;
+}
+.bigcontent__body img {
+  width: 100%;
+}
+
+.bigcontent__body__content h3 {
+  font-size: clamp(1.125rem, 1.0263rem + 0.3947vw, 1.35rem);;
+  font-weight: bold;
+  color: #000;
+  margin: 11px 0;
+}
+.bigcontent__body h4 {
+  color: #888;
+  font-size: 16px;
+  line-height: 1.8;
+  font-family: "Inter";
+  margin: 12px 0;
+}
+.content__info {
+  padding: 0;
+  margin: 18px 0 0 0;
+}
+.content__info h2 {
+  color: #000;
+  font-size: 14px;
+  margin: 0;
+  font-family: "Inter";
+  font-weight: 700;
+  padding-bottom: 2px;
+}
+.content__info time {
+  color: #888;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  margin-left: 16px;
+}
+</style>

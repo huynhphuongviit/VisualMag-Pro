@@ -1,56 +1,32 @@
 <template>
-  <div class="AlbumImages__container">
+  <section class="AlbumImages__container">
     <div class="container__images">
       <div class="images__content" v-for="image in images">
-        <a href="">
+        <NuxtLink to="">
           <img alt="" :src="image.src" />
           <div>
             <h2>{{ image.title }}</h2>
             <h3>{{ image.description }}</h3>
           </div>
-        </a>
+        </NuxtLink>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
+import {imagesBanner} from '../store/dataHomePage'
 export default {
+  name: 'AlbumImages',
   data() {
-    let images = [
-      {
-        title: "ADVERTISING",
-        src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/06/macbook-laptop-400x266.jpeg",
-        description: "The Ultimate Guide To Joining or Hosting A Twitter Chat",
-      },
-      {
-        title: "MARKETING",
-        src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/05/top-workspace-400x266.jpeg",
-        description: "How to Use DaaS Tools in Your Marketing Analysis",
-      },
-      {
-        title: "WEB DESIGN",
-        src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/05/business-working2-400x266.jpeg",
-        description: "How to Humanize AI-Generated Marketing Content",
-      },
-      {
-        title: "MARKETING",
-        src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/05/laptop-typing-400x266.jpeg",
-        description: "How to Run an E-Commerce Marketing Campaign",
-      },
-      {
-        title: "WEB DESIGN",
-        src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/05/business-working3-400x266.jpeg",
-        description: "The Best Project Management Software for Beginners",
-      },
-    ];
+    let images = imagesBanner
     return {
       images,
     };
   },
 };
 </script>
-<style>
+<style >
 .AlbumImages__container {
   max-width: 1180px;
   margin-left: auto;
@@ -92,15 +68,17 @@ export default {
   position: absolute;
   bottom: 20px;
   left: 10px;
-  padding: 10px 10px 0 10px;
+  padding: 10px 6px 0 10px;
   max-width: 90%;
 }
 .images__content a div h2 {
   color: #fff;
   font-size: 11px;
-  padding: 2px 6px;
+  padding: 4px 6px;
   width: fit-content;
+  text-align: center;
 }
+
 .images__content a > div > h3 {
   font-size: 17px;
   color: #fff;
@@ -125,6 +103,9 @@ export default {
 }
 .images__content:nth-child(5) a div h2 {
   background-color: #ff4f81;
+}
+.images__content a div h2:hover {
+  background-color: rgba(0, 0, 0, 0.519);;
 }
 @media only screen and (min-width: 960px) and (max-width: 1179px) {
   .container__images {
@@ -180,8 +161,7 @@ export default {
   }
 }
 @media only screen and (max-width: 600px) {
-  .images__content {
-  }
+ 
   .images__content:nth-child(1) {
     height: 55vw;
   }
