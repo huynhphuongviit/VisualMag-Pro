@@ -85,7 +85,6 @@ typings/
 .nuxt/client.js
 
 # Nuxt generate
-dist
 
 # vuepress build output
 .vuepress/dist
