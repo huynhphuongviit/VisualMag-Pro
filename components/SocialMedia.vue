@@ -24,26 +24,33 @@ export default {
   },
 };
 </script>
-<style >
+<style>
 .socialMedia {
   width: 100%;
   margin: 40px 0;
 }
-.socialMedia__li{
-  width: 99.4%;
+.socialMedia__li {
+  width: calc(50% - 12px);
 }
-.socialMedia__li .bigcontent__body .bigcontent__body__content{
+.socialMedia__li .bigcontent__body .bigcontent__body__content {
   margin-top: 20px;
 }
 .socialMedia__ul {
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-gap: 0.5em;
-  grid-template-areas:
-    "item1 item2"
-    "item3 item4";
-  grid-template-columns: calc(50% - 0.625em) calc(50% - 0.625em);
-  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 5px 24px ;
+}
+@media screen and (max-width: 768px) {
+  .socialMedia__li {
+    width: calc(50% - 12px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .socialMedia__li {
+    width: 100%;
+  }
 }
 </style>

@@ -1,30 +1,36 @@
 <template>
   <section class="fashion">
-    <HeaderSection name="Fashion" nuxtlink="https://demo.wpenjoy.com/visualmag-pro/category/fashion/"></HeaderSection>
+    <HeaderSection
+      name="Fashion"
+      nuxtlink="https://demo.wpenjoy.com/visualmag-pro/category/fashion/"
+    ></HeaderSection>
     <SmallContentWithImages :data="data"></SmallContentWithImages>
   </section>
 </template>
 
 <script>
-import SmallContentWithImages from './SmallContentWithImages.vue';
-import HeaderSection from './HeaderSection.vue';
-import {dataFashion} from '../store/dataHomePage'
+import SmallContentWithImages from "./SmallContentWithImages.vue";
+import HeaderSection from "./HeaderSection.vue";
+import { dataFashion } from "../store/dataHomePage";
 export default {
-  data(){
-    let data = dataFashion
-    return{
-      data
-    }
+  data() {
+    let data = dataFashion;
+    return {
+      data,
+    };
   },
   components: {
     SmallContentWithImages,
-    HeaderSection
-  }
+    HeaderSection,
+  },
 };
 </script>
-<style >
+<style>
 .fashion {
   margin-top: 40px;
   margin-bottom: 30px;
+}
+.fashion .smallcontent__container--ul {
+  padding-top: 16px;
 }
 </style>

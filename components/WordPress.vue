@@ -1,6 +1,6 @@
 <template>
   <section class="wordpress">
-    <HeaderSection name="Wordpress" nuxtlink="https://demo.wpenjoy.com/visualmag-pro/tag/wordpress/"></HeaderSection>
+    <HeaderSection name="WordPress" nuxtlink="https://demo.wpenjoy.com/visualmag-pro/tag/wordpress/"></HeaderSection>
     <SmallContentWithImages :data="data"></SmallContentWithImages>
   </section>
 </template>
@@ -24,7 +24,15 @@ export default {
 </script>
 <style>
 .wordpress {
-  margin-top: 40px;
+  margin-top: 83px;
   margin-bottom: 30px;
+}
+.wordpress .smallcontent__container--ul {
+  padding-top: 16px;
+}
+@media screen and (max-width: 768px) {
+  .wordpress{
+    margin-top: 50px;
+  }
 }
 </style>

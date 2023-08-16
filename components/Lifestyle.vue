@@ -25,6 +25,9 @@ export default {
 <style>
 .lifestyle {
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
+}
+.lifestyle .smallcontent__container--ul {
+  padding-top: 16px;
 }
 </style>

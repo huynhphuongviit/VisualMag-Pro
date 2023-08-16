@@ -23,13 +23,13 @@ export default {
   data() {
     let bigContentData = {
       src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/05/business-working2-400x266.jpeg",
-      title: "The Best Project Management Software for Beginners",
+      title: "How to Humanize AI-Generated Marketing Content",
       time: "May 27, 2021",
       name: "John Doe",
       nuxtlink:
         "https://demo.wpenjoy.com/visualmag-pro/how-to-humanize-ai-generated-marketing-content/",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta felis non nibh...",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta felis non nibh interdum, tempus tempor urna tincidunt. Sed eget...",
     };
     let smallContentData = dataSmallWebDesign
     return {
@@ -42,9 +42,19 @@ export default {
 </script>
 <style>
 .web__design {
-  width: 49%;
+  width: 48%;
   margin-top: 35px;
-  padding-right: 16px;
 }
+.web__design  .bigcontent__body  h4{
+    margin: 30px 0;
+}
+.web__design  .bigcontent__body .bigcontent__body__content .content__info {
+  margin-top: 12px
+}
+@media screen and (max-width: 768px) {
+  .web__design{
+    width: 100%;
+  }
 
+}
 </style>

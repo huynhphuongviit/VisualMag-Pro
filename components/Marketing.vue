@@ -12,7 +12,7 @@
 import BigContent from "./BigContent.vue";
 import HeaderSection from "./HeaderSection.vue";
 import SmallContentWithImages from "./SmallContentWithImages.vue";
-import {dataSmallMarketing} from '../store/dataHomePage'
+import { dataSmallMarketing } from "../store/dataHomePage";
 export default {
   comments: {
     BigContent,
@@ -28,9 +28,9 @@ export default {
       nuxtlink:
         "https://demo.wpenjoy.com/visualmag-pro/facebook-stories-a-marketing-guide-with-actionable-tips/",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta felis non nibh...",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta felis non nibh interdum, tempus tempor urna tincidunt. Sed eget...",
     };
-    let smallContentData = dataSmallMarketing
+    let smallContentData = dataSmallMarketing;
     return {
       bigContentData,
       smallContentData,
@@ -40,9 +40,18 @@ export default {
 </script>
 <style>
 .marketting {
-  width: 49%;
+  width: 48%;
   margin-top: 35px;
-  padding-right: 16px;
 }
-
+.marketting .bigcontent__body h4 {
+  margin: 30px 0;
+}
+.marketting .bigcontent__body .bigcontent__body__content .content__info {
+  margin-top: 12px;
+}
+@media screen and (max-width: 768px) {
+  .marketting {
+    width: 100%;
+  }
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <header class="header__mobile">
+  <div class="header__mobile">
     <b-navbar toggleable="lg" class="d-flex justify-content-between">
       <img
         alt=""
@@ -12,20 +12,20 @@
       </b-navbar-nav>
       <button
         v-if="!showList"
-        @click="showList = !showList"
+        @click="openMenu"
         class="d-flex justify-content-center align-items-center"
       >
         <b-icon icon="list"></b-icon>
       </button>
       <button
         v-if="showList"
-        @click="showList = !showList"
+        @click="closeMenu"
         class="d-flex justify-content-center align-items-center btn__icon--x"
       >
         <b-icon icon="x"></b-icon>
       </button>
     </b-navbar>
-  </header>
+  </div>
 </template>
 
 <script>
@@ -46,30 +46,41 @@ export default {
       showList: false,
     };
   },
+  methods: {
+    openMenu() {
+      this.showList = true;
+      document.documentElement.classList.add("no-scroll");
+    },
+    closeMenu() {
+      this.showList = false;
+      document.documentElement.classList.remove("no-scroll");
+    },
+  },
 };
 </script>
 <style>
+.no-scroll{
+  overflow: hidden;
+}
 @media screen and (max-width: 959px) {
   .header__mobile {
     z-index: 1;
     display: block !important;
   }
-  header img {
-    margin-left: 17.5px;
-  }
   .navbar {
     position: relative;
   }
-
   .navbar-nav {
     position: absolute;
     top: 0;
     z-index: 1000;
     background-color: #fff;
-    width: 100vw;
     height: 100vh;
     transition: 2s;
     padding: 67px 32px 32px 25px;
+    width: 100vw;
+    position: fixed;
+    left: 0;
   }
   .navbar .navbar-nav .nav-item a {
     padding: 7px;
@@ -83,7 +94,6 @@ export default {
     background-color: transparent;
     padding: 5px;
     border: 1px solid #9292923b;
-    right: 18px;
     position: relative;
     width: 34px;
   }

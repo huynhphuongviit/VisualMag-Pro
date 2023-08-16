@@ -1,6 +1,6 @@
 <template>
   <section class="business">
-    <HeaderSection name="News" nuxtlink="https://demo.wpenjoy.com/visualmag-pro/category/news/"></HeaderSection>
+    <HeaderSection name="Business" nuxtlink="https://demo.wpenjoy.com/visualmag-pro/category/news/"></HeaderSection>
     <MediumContent :data="data"></MediumContent>
   </section>
 </template>
@@ -24,8 +24,7 @@ export default {
 </script>
 <style>
 .business {
-  width: 100%;
-  margin: 40px 0;
+  margin: 72px 0;
 }
 
 </style>

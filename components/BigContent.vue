@@ -32,17 +32,23 @@ export default {
 }
 
 .bigcontent__body__content h3 {
-  font-size: clamp(1.125rem, 1.0263rem + 0.3947vw, 1.35rem);;
+  font-size: clamp(1.125rem, 1.0263rem + 0.3947vw, 1.35rem);
   font-weight: bold;
   color: #000;
   margin: 11px 0;
 }
 .bigcontent__body h4 {
-  color: #888;
+  color: #888888;
   font-size: 16px;
   line-height: 1.8;
   font-family: "Inter";
   margin: 12px 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 3.6em;
 }
 .content__info {
   padding: 0;
@@ -57,10 +63,13 @@ export default {
   padding-bottom: 2px;
 }
 .content__info time {
-  color: #888;
+  color: #888888;
   font-size: 14px;
+  font-family: "Inter";
   margin: 0;
   padding: 0;
-  margin-left: 16px;
+  margin-left: 15px;
+}
+@media screen and (min-width: 769px) {
 }
 </style>

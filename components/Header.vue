@@ -8,7 +8,11 @@
         />
         <div class="d-flex justify-content-between">
           <b-navbar-nav>
-            <b-nav-item href="link.link" v-for="link in links" key="index">
+            <b-nav-item
+              href="link.link"
+              v-for="link in links"
+              :key="link.index"
+            >
               <NuxtLink :to="link.nuxtlink">{{ link.name }}</NuxtLink>
             </b-nav-item>
           </b-navbar-nav>
@@ -89,6 +93,7 @@ header {
   padding: 15px 0;
   box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
 }
+
 header img {
   width: 220px;
   aspect-ratio: auto 220 / 41;
@@ -144,6 +149,7 @@ header img {
   width: 16px;
   transform: rotate(90deg);
 }
+
 @media screen and (min-width: 960px) {
   .search__container {
     margin-right: 0;
@@ -153,10 +159,31 @@ header img {
   .header__pc {
     display: none;
   }
+  header {
+    padding: 12.5px 0;
+  }
+  .header__mobile {
+    width: 96%;
+    margin: 0 auto;
+  }
 }
-@media screen and (max-width: 1180px) {
-  .header__pc nav > div > div {
+@media screen and (min-width: 961px) and (max-width: 1180px) {
+  .header__pc nav > div > .search__container {
     display: none !important;
   }
+  header {
+    padding: 12.5px 0;
+  }
+  .header__pc {
+    width: 98%;
+    margin: 0 auto;
+  }
+  .navbar-nav {
+    margin-right: 0;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    padding: 10px 0 10px 12px;
+}
+
 }
 </style>

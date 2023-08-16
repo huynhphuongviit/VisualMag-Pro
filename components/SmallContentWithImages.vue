@@ -10,7 +10,7 @@
         </figure>
 
         <div style="color: #888888" class="smallcontent__container--content">
-          <h2 style="margin-bottom: 5px" class="smallcontent__container--h2">
+          <h2  class="smallcontent__container--h2">
             <NuxtLink
               :to="smallContent.nuxtlink"
               >{{ smallContent.title }}</NuxtLink
@@ -61,8 +61,10 @@ export default {
 }
 .smallcontent__container--li {
   display: flex;
-  height: fit-content;
-  margin-bottom:8px;
+  margin-bottom:24px;
+}
+.smallcontent__container--li .smallcontent__container--figure{
+  margin: 0;
 }
 .smallcontent__container--li .smallcontent__container--figure img {
   width: 120px;
@@ -72,6 +74,7 @@ export default {
   display: flex;
   align-items: flex-start;
   padding-left: 15px;
+  margin-bottom: 2px;
 }
 .smallcontent__container--content h2 a {
   color: #000;

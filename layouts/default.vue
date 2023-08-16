@@ -50,9 +50,21 @@ export default {
 };
 </script>
 <style>
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar { 
+    display: none; 
+}
 .container__default {
   font-family: "Kumbh-Sans", sans-serif;
   text-decoration: none;
+  margin: auto;
+}
+.container__default a:hover{
+  color: #0099e5;
+
 }
 .btn__scroll {
   position: fixed;
@@ -63,6 +75,9 @@ export default {
   height: 30px;
   width: 30px;
 }
+.btn__scroll:hover{
+  opacity: 0.6!important;
+}
 .opacity--0 {
   visibility: hidden;
   opacity: 0;
@@ -70,8 +85,8 @@ export default {
 }
 .fade {
   visibility: visible;
-  opacity: 1!important;
-  transition: opacity 1s; 
+  opacity: 1 !important;
+  transition: opacity 1s;
 }
 .btn__scroll img {
   height: 15px;
@@ -81,6 +96,6 @@ export default {
   text-decoration: none;
   cursor: pointer;
   color: #000;
-
 }
+
 </style>

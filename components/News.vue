@@ -24,7 +24,12 @@ export default {
 <style>
 .news {
   width: 100%;
-  margin: 40px 0;
+  margin: 63px 0 66px 0;
+}
+@media screen and (max-width: 768px) {
+  .news{
+    margin-top: 55px;
+  }
 }
 
 </style>

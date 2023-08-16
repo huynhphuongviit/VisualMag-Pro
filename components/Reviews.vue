@@ -65,28 +65,14 @@ export default {};
 </script>
 <style>
 .reviews {
-  margin-top: 4vw;
-}
-.reviews__header {
-  border-top: 1px solid #dddddd;
-  position: relative;
-  width: 100%;
-}
-
-.reviews__header a {
-  width: fit-content;
-  font-size: 23px;
-  color: #000;
-  border-bottom: 2px solid #0099e5;
-  display: inline-block;
-  position: absolute;
-  bottom: 0px;
-  padding: 10px 0;
-  font-weight: bold;
+  margin-top: 40px;
 }
 .reviews__body__img {
   filter: brightness(80%);
   width: 100%;
+}
+.reviews__container--main{
+  margin-top:  16px;
 }
 .reviews__container--main a {
   text-decoration: none;
@@ -109,8 +95,6 @@ export default {};
   padding: 0;
   margin: 10px 0 0 0;
 }
-.reviews__body__content .reviews__body__item {
-}
 .reviews__body__content .reviews__body__item h3 {
   font-size: 17px;
   margin: 15px 0;
@@ -118,5 +102,10 @@ export default {};
 }
 .reviews__body__content .reviews__body__item h3 a {
   color: #000;
+}
+@media screen and (max-width: 768px) {
+  .reviews__container--main{
+    width: 100%;
+  }
 }
 </style>

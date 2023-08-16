@@ -51,37 +51,27 @@ export default {
 <style>
 .followUs {
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 72px;
 }
 
-.followUs__header {
-  border-top: 1px solid #dddddd;
-  position: relative;
-  width: 100%;
-}
-.followUs__header a {
-  width: fit-content;
-  font-size: 23px;
-  color: #000;
-  border-bottom: 2px solid #0099e5;
-  display: inline-block;
-  position: absolute;
-  bottom: 0px;
-  padding: 10px 0;
-  font-weight: bold;
-  text-decoration: none;
-}
+
 .followUs__content {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
-  margin: 12px 0 0 0;
+  margin-top: 18px;
+  gap: 10px 10px;
 }
 .followUs__content__item {
   width: fit-content;
-  padding: 8px 10px 8px 0;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.followUs__content__item:hover{
+  transform: scale(1.1);
 }
 .followUs__content__item a {
   display: flex;
@@ -108,9 +98,7 @@ export default {
 .followUs__content__item:nth-child(4) a .followUs__item--span {
   color: #ff0000;
 }
-.followUs__content__item:nth-child(5) {
-  padding: 7px 10px 10px 0;
-}
+
 .followUs__content__item:nth-child(5) a .followUs__item--span {
   color: #E94C89;
 }
@@ -126,5 +114,12 @@ export default {
 .followUs__content__item:nth-child(5) a .followUs__item--span {
   padding-left: 5px;
 
+}
+@media  screen and (max-width: 780px) {
+  .followUs__content{
+  justify-content: unset;
+  gap: 10px 20px;
+
+  }
 }
 </style>

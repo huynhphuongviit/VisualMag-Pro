@@ -336,6 +336,28 @@ let dataSocial = [
       "https://demo.wpenjoy.com/visualmag-pro/6-best-instagram-scheduler-apps-for-auto-posting-on-instagram/",
   }
 ]
+const dataBlogging = [
+  {
+    src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/04/architecture-building-400x266.jpeg",
+    title: "A Starter Guide to Google Ads Manager Accounts",
+    nuxtlink:
+      "https://demo.wpenjoy.com/visualmag-pro/a-starter-guide-to-google-ads-manager-accounts/",
+  },
+  {
+    src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/04/family-bathroom-400x266.jpeg",
+    title: "How to Use Amazon Attribution For Ad Campaigns",
+    nuxtlink:
+      "https://demo.wpenjoy.com/visualmag-pro/how-to-use-amazon-attribution-for-ad-campaigns/",
+  },
+  {
+    src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/04/colored-pastels-400x266.jpeg",
+    title: "How to Convert Blog Readers Into Customers",
+    nuxtlink:
+      "https://demo.wpenjoy.com/visualmag-pro/how-to-convert-blog-readers-into-customers/",
+  },
+  
+
+]
 export {
   dataTechnology,
   dataWordPress,
@@ -347,5 +369,6 @@ export {
   dataBusiness,
   imagesBanner,
   dataSmallAdvertising,
-  dataSocial
+  dataSocial,
+  dataBlogging
 }

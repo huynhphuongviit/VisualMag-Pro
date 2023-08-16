@@ -46,7 +46,7 @@
         </ul>
         <div class="footer__content__intro padding__left--12px">
           <h3>Newsletter</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p style="margin-bottom: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <NuxtLink to="">Subscribe now!</NuxtLink>
         </div>
       </div>
@@ -121,7 +121,7 @@ export default {
 <style>
 footer {
   background-color: #000;
-  padding: 40px 40px 28px 40px;
+  padding: 40px 40px 30px 40px;
 }
 .footer__container {
   display: flex;
@@ -149,7 +149,11 @@ footer {
 .padding__left--12px {
   padding-left: 12px;
 }
-
+.footer__container h3{
+  font-size: 15px;
+  font-family:"Inter";
+  color: #fff
+}
 .footer__content--ul h3,
 .footer__content__intro h3 {
   font-size: 18px;
@@ -189,6 +193,9 @@ footer {
 .footer__icon__item {
   margin: 4.8px 7.3px;
 }
+.footer__icon__item:hover{
+  transform: scale(1.1);
+}
 .footer__icon__item a svg {
   font-size: 13px;
   color: #fff;
@@ -224,5 +231,24 @@ footer {
 }
 .footer__icon__item:nth-child(6) a {
   background-color: #0d66c2;
+}
+@media screen and (max-width: 768px) {
+  footer{
+    margin-top: 44px;
+    padding: 20px
+  }
+  .footer__content {
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+
+  .footer__content__intro,
+  .footer__content--ul{
+    padding: 0;
+    width: 100%;
+  }
+  .footer__content__intro p{
+    margin-bottom: 0;
+  }
 }
 </style>

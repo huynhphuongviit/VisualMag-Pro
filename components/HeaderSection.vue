@@ -38,4 +38,5 @@ export default {
   padding: 7px 0;
   font-weight: 700;
 }
+
 </style>

@@ -37,7 +37,7 @@ export default {
       nuxtlink:
         "https://demo.wpenjoy.com/visualmag-pro/5-steps-for-using-paid-internet-advertising-to-drive-conversions/",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta felis non nibh...",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta felis non nibh interdum, tempus tempor urna tincidunt. Sed eget...",
     };
     let smallContentData = dataSmallAdvertising
     return {
@@ -49,7 +49,6 @@ export default {
 </script>
 <style>
 .avertising {
-  width: 98%;
   margin-top: 40px;
   margin-bottom: 30px;
   
@@ -70,5 +69,21 @@ export default {
 .avertising__container--extra {
   width: 50%;
   margin-left: 15px;
+}
+@media screen and (max-width: 768px) {
+  .avertising__container__section{
+    flex-direction: column;
+  }
+  .avertising__container--main{
+    width: 100%;
+  }
+  .avertising__container--extra{
+    margin: 0 0 0 0;
+    width: 100%;
+
+  }
+  .avertising__container--extra .smallcontent__container--ul{
+    margin-top: 20px;
+  }
 }
 </style>

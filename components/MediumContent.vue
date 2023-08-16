@@ -2,7 +2,7 @@
   <ul class="mediumcontent__ul">
     <li class="d-flex flex-column mediumcontent__li" v-for="mediumItem in data">
       <a
-        :to="mediumItem.link"
+        :to="mediumItem.nuxtlink"
       >
         <figure class="mediumcontent__figure">
           <img
@@ -13,7 +13,7 @@
         </figure>
         <div class="mediumcontent__content">
           <h2 style="margin-bottom: 5px" class="mediumcontent__h2">
-            {{ mediumItem.title }}
+            <a :href="mediumItem.nuxtlink"> {{ mediumItem.title }}</a>
           </h2>
         </div>
       </a>
@@ -28,23 +28,24 @@ export default {
 </script>
 <style>
 .mediumcontent__ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25em;
+  row-gap: 1em;
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-gap: 0.5em;
-  grid-template-areas:
-    "item1 item2"
-    "item3 item4";
-  grid-template-columns: calc(50% - 0.625em) calc(50% - 0.625em);
-  justify-content: space-between;
+  margin-top: 24px;
 }
-
+.mediumcontent__li{
+  width:calc(100% - 50% - 0.625em);
+}
 .mediumcontent__li a {
   color: #000;
   text-decoration: none;
 }
 .mediumcontent__li figure{
   width: 100%;
+  margin: 0 0 10px 0;
 }
 .mediumcontent__li figure img {
   width: 100%;
@@ -55,5 +56,10 @@ export default {
   align-items: flex-start;
   font-size: 16px;
   font-weight: 400;
+}
+@media screen and (max-width: 600px) {
+  .mediumcontent__li {
+    width: 100%;
+  }
 }
 </style>

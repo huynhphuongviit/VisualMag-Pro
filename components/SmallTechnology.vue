@@ -1,6 +1,10 @@
 <template>
   <ul class="technology__container--ul">
-    <li v-for="item in data" key="index" class="technology__container--li">
+    <li
+      v-for="item in data"
+      key="index"
+      class="d-flex technology__container--li"
+    >
       <figure class="technology__container--figure">
         <img :src="item.src" alt="" loading="lazy" />
       </figure>
@@ -29,7 +33,6 @@ export default {
   padding: 15px 0 0 0;
 }
 .technology__container--li {
-  display: flex;
   height: fit-content;
   margin-bottom: 16px;
 }
@@ -46,10 +49,10 @@ export default {
   margin: 0;
   font-weight: bold;
   font-weight: 700;
- display: flex;
- align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
-.technology__container--content .technology__container--info{
+.technology__container--content .technology__container--info {
   margin-top: 11px;
 }
 .technology__container--content .technology__container--info time {
@@ -67,12 +70,41 @@ export default {
   font-family: "Inter", sans-serif;
   font-weight: 700;
 }
-.technology__container--content h3 {
+.technology__container--li h3 {
   color: #888;
   font-size: 16px;
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
   line-height: 1.8;
-  margin-top: 12px;
-}</style>
+  font-family: "Inter";
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 3.6em;
+}
+@media screen and (max-width: 768px) {
+  .technology__container--figure img {
+    max-width: 120px;
+  }
+  .technology__container--li {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .technology__container--info p,
+  .technology__container--li h3 {
+    display: none;
+  }
+  .technology__container--content h2 a {
+    font-size: 16px;
+  }
+  .technology__container--content {
+    padding-left: 16px;
+  }
+  .technology__container--info time {
+    margin-left: 0 !important;
+  }
+}
+</style>
