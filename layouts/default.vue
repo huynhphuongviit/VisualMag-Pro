@@ -50,13 +50,7 @@ export default {
 };
 </script>
 <style>
-html {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-html::-webkit-scrollbar { 
-    display: none; 
-}
+
 .container__default {
   font-family: "Kumbh-Sans", sans-serif;
   text-decoration: none;
