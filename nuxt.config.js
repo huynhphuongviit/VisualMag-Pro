@@ -1,9 +1,4 @@
 export default {
-  target: 'static',
-  ssr: false,
-  generate: {
-    fallback: true
-  },
   head: {
     title: 'VisualMag Pro',
     htmlAttrs: {
@@ -34,7 +29,9 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: [
+    
+  ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['bootstrap-vue/nuxt'],
