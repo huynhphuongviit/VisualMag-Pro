@@ -3,42 +3,36 @@
     "name": "category",
     "path": "/category",
     "component": "C:\\\\Users\\\\Phương\\\\Desktop\\\\visualmag-pro\\\\pages\\\\category\\\\index.vue",
-    "chunkName": "pages/category/index",
-    "_name": "_6a870348"
+    "chunkName": "pages/category/index"
   },
   {
     "name": "tag",
     "path": "/tag",
     "component": "C:\\\\Users\\\\Phương\\\\Desktop\\\\visualmag-pro\\\\pages\\\\tag\\\\index.vue",
-    "chunkName": "pages/tag/index",
-    "_name": "_539d05e0"
+    "chunkName": "pages/tag/index"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Phương\\\\Desktop\\\\visualmag-pro\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_61e9fd9a"
+    "chunkName": "pages/index"
   },
   {
     "name": "category-id",
     "path": "/category/:id",
     "component": "C:\\\\Users\\\\Phương\\\\Desktop\\\\visualmag-pro\\\\pages\\\\category\\\\_id.vue",
-    "chunkName": "pages/category/_id",
-    "_name": "_d6633078"
+    "chunkName": "pages/category/_id"
   },
   {
     "name": "tag-id",
     "path": "/tag/:id",
     "component": "C:\\\\Users\\\\Phương\\\\Desktop\\\\visualmag-pro\\\\pages\\\\tag\\\\_id.vue",
-    "chunkName": "pages/tag/_id",
-    "_name": "_74730048"
+    "chunkName": "pages/tag/_id"
   },
   {
     "name": "params",
     "path": "/:params",
     "component": "C:\\\\Users\\\\Phương\\\\Desktop\\\\visualmag-pro\\\\pages\\\\_params.vue",
-    "chunkName": "pages/_params",
-    "_name": "_49a2c426"
+    "chunkName": "pages/_params"
   }
 ]
