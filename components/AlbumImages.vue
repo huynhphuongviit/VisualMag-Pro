@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { imagesBanner } from "../store/dataHomePage";
+import { imagesBanner } from "../store/dataFake";
 export default {
   name: "AlbumImages",
   data() {

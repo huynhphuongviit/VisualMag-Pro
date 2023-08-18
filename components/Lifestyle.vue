@@ -7,11 +7,11 @@
 
 <script>
 import HeaderSection from './HeaderSection.vue';
-import {dataLifestyle} from '../store/dataHomePage'
+import {dataFake} from '../store/dataFake'
 import SmallTechnology from './SmallTechnology.vue';
 export default {
   data(){
-    let data = dataLifestyle
+    let data = dataFake.slice(5, 10)
     return{
       data
     }
@@ -35,6 +35,10 @@ export default {
 }
 .lifestyle .technology__container--ul li .technology__container--content{
   padding-left: 15px;
+}
+.lifestyle .technology__container--ul li .technology__container--content .technology__container--info p,
+.lifestyle .technology__container--ul li .technology__container--content h3{
+  display: none;
 }
 .lifestyle .technology__container--ul li .technology__container--content h2 a{
   font-size: 16px;

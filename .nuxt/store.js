@@ -14,7 +14,6 @@ let store = {};
   store.modules = store.modules || {}
 
   resolveStoreModules(require('..\\store\\dataFake.js'), 'dataFake.js')
-  resolveStoreModules(require('..\\store\\dataHomePage.js'), 'dataHomePage.js')
 
   // If the environment supports hot reloading...
 })()

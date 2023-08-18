@@ -8,10 +8,10 @@
 <script>
 import MediumContent from './MediumContent.vue';
 import HeaderSection from './HeaderSection.vue';
-import {dataBusiness} from '../store/dataHomePage'
+import {dataFake} from '../store/dataFake'
 export default {
   data(){
-    let data = dataBusiness
+    let data = dataFake.slice(25, 29)
     return{
       data,
     }

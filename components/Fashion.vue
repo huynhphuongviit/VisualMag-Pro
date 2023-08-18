@@ -10,11 +10,11 @@
 
 <script>
 import HeaderSection from "./HeaderSection.vue";
-import { dataFashion } from "../store/dataHomePage";
+import { dataFake } from "../store/dataFake";
 import SmallTechnology from "./SmallTechnology.vue";
 export default {
   data() {
-    let data = dataFashion;
+    let data = dataFake.slice(8,20);
     return {
       data,
     };
@@ -29,8 +29,7 @@ export default {
 .fashion {
   margin-top: 40px;
   margin-bottom: 30px;
-}
-.fashion .technology__container--ul li{
+}.fashion .technology__container--ul li{
   margin-bottom: 10px;
 }
 .fashion .technology__container--ul li figure img{
@@ -38,6 +37,10 @@ export default {
 }
 .fashion .technology__container--ul li .technology__container--content{
   padding-left: 15px;
+}
+.fashion .technology__container--ul li .technology__container--content .technology__container--info p,
+.fashion .technology__container--ul li .technology__container--content h3{
+  display: none;
 }
 .fashion .technology__container--ul li .technology__container--content h2 a{
   font-size: 16px;

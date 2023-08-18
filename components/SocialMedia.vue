@@ -15,11 +15,12 @@
 <script>
 import HeaderSection from "./HeaderSection.vue";
 import BigContent from "./BigContent.vue";
-import { dataSocial } from "../store/dataHomePage";
+import { dataFake } from "../store/dataFake";
 export default {
   component: { HeaderSection, BigContent },
   data() {
-    let data = dataSocial;
+    let dataFilter = dataFake.filter((data) => data.categories.includes('social-media'));
+    let data = dataFilter.slice(0,4);
     return { data };
   },
 };

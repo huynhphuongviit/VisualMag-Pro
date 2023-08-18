@@ -529,7 +529,37 @@ const data = `[{
   ]
 }
 ]`
+
+const imagesBanner = [
+  {
+    title: "ADVERTISING",
+    src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/06/macbook-laptop-400x266.jpeg",
+    description: "The Ultimate Guide To Joining or Hosting A Twitter Chat",
+  },
+  {
+    title: "MARKETING",
+    src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/05/top-workspace-400x266.jpeg",
+    description: "How to Use DaaS Tools in Your Marketing Analysis",
+  },
+  {
+    title: "WEB DESIGN",
+    src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/05/business-working2-400x266.jpeg",
+    description: "How to Humanize AI-Generated Marketing Content",
+  },
+  {
+    title: "MARKETING",
+    src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/05/laptop-typing-400x266.jpeg",
+    description: "How to Run an E-Commerce Marketing Campaign",
+  },
+  {
+    title: "WEB DESIGN",
+    src: "https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2021/05/business-working3-400x266.jpeg",
+    description: "The Best Project Management Software for Beginners",
+  },
+];
+
 const dataFake = JSON.parse(data)
 export {
   dataFake,
+  imagesBanner
 }

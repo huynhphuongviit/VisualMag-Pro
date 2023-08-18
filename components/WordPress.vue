@@ -7,11 +7,11 @@
 
 <script>
 import HeaderSection from './HeaderSection.vue';
-import {dataWordPress} from '../store/dataHomePage'
+import {dataFake} from '../store/dataFake'
 import SmallTechnology from './SmallTechnology.vue';
 export default {
   data(){
-    let data = dataWordPress
+    let data = dataFake.slice(15, 20)
     return{
       data
     }
@@ -35,6 +35,10 @@ export default {
 }
 .wordpress .technology__container--ul li .technology__container--content{
   padding-left: 15px;
+}
+.wordpress .technology__container--ul li .technology__container--content .technology__container--info p,
+.wordpress .technology__container--ul li .technology__container--content h3{
+  display: none;
 }
 .wordpress .technology__container--ul li .technology__container--content h2 a{
   font-size: 16px;

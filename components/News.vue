@@ -7,10 +7,11 @@
 <script>
 import MediumContent from './MediumContent.vue';
 import HeaderSection from './HeaderSection.vue';
-import {dataNews} from '../store/dataHomePage';
+import {dataFake} from '../store/dataFake';
 export default {
   data(){
-    let data = dataNews;
+    let dataFilter = dataFake.filter((data) => data.categories.includes('news'));
+    let data = dataFilter.slice(0,4);
     return{
       data,
     }
