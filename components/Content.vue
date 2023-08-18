@@ -3,13 +3,13 @@
     <AlbumImages></AlbumImages>
     <section class="d-flex justify-content-between section__top">
       <div class="leftContent__container--top">
-        <Advertising></Advertising>
+        <Marketing style='width: 100%' title="advertising"></Marketing>
         <Blogging></Blogging>
         <div
           class="leftContent__container--item d-flex justify-content-between"
         >
-          <WebDesign></WebDesign>
-          <Marketing></Marketing>
+          <Marketing title="web-design"></Marketing>
+          <Marketing title="marketing"></Marketing>
         </div>
       </div>
       <div class="rightContent__container--top">
@@ -37,8 +37,6 @@
 
 <script>
 import AlbumImages from "./AlbumImages.vue";
-import WebDesign from "./WebDesign.vue";
-import Advertising from "./Advertising.vue";
 import Marketing from "./Marketing.vue";
 import Blogging from "./Blogging.vue";
 import ImagesBanner from "./Banner.vue";
@@ -55,9 +53,7 @@ import Technology from "./Technology.vue";
 export default {
   components: {
     AlbumImages,
-    Advertising,
     Blogging,
-    WebDesign,
     Marketing,
     ImagesBanner,
     FollowUs,
@@ -96,7 +92,7 @@ export default {
     width: 98%;
   }
 }
-@media screen and (max-width: 960px) { 
+@media screen and (max-width: 960px) {
   main {
     width: 96%;
   }

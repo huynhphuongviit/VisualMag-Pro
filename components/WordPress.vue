@@ -1,6 +1,6 @@
 <template>
   <section class="wordpress">
-    <HeaderSection name="WordPress" nuxtlink="https://demo.wpenjoy.com/visualmag-pro/tag/wordpress/"></HeaderSection>
+    <HeaderSection name="WordPress" nuxtlink="/tag/wordpress/"></HeaderSection>
     <SmallTechnology :data="data" totalViews="4"></SmallTechnology>
   </section>
 </template>

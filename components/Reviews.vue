@@ -2,12 +2,12 @@
   <section class="reviews">
     <HeaderSection
       name="Reviews"
-      nuxtlink="https://demo.wpenjoy.com/visualmag-pro/category/reviews/"
+      nuxtlink="/category/reviews/"
     ></HeaderSection>
     <div class="d-flex reviews__container">
       <div class="reviews__container--main">
         <NuxtLink
-          to="https://demo.wpenjoy.com/visualmag-pro/the-6-step-guide-to-make-your-mobile-site-load-faster/"
+          to="/the-6-step-guide-to-make-your-mobile-site-load-faster/"
         >
           <div class="reviews__body">
             <img

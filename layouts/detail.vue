@@ -99,7 +99,7 @@ export default {
   color: #000;
 }
 @media screen and (max-width: 768px) {
-  main {
+  .main__detail {
     flex-direction: column;
     padding: 20px;
   }

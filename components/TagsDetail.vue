@@ -2,6 +2,7 @@
   <section class="tags__container">
     <HeaderSection
       name="Tags"
+      nuxtlink="/"
     ></HeaderSection>
     <ul class="tags__container__ul">
       <li class="tags__container__li" v-for="tag in tags">

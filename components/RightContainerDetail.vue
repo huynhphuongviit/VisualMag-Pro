@@ -1,6 +1,6 @@
 <template>
   <section class="detail__right">
-    <a href="https://wpenjoy.com/themes/visualmag-pro/">
+    <a href="/">
       <img
         class="img__main"
         alt=""

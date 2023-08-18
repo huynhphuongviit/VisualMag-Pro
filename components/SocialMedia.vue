@@ -2,7 +2,7 @@
   <section class="socialMedia">
     <HeaderSection
       name="Social Media"
-      nuxtlink="https://demo.wpenjoy.com/visualmag-pro/category/social-media/"
+      nuxtlink="/category/social-media/"
     ></HeaderSection>
     <ul class="socialMedia__ul">
       <li class="socialMedia__li" v-for="item in data" key="index">

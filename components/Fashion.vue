@@ -2,7 +2,7 @@
   <section class="fashion">
     <HeaderSection
       name="Fashion"
-      nuxtlink="https://demo.wpenjoy.com/visualmag-pro/category/fashion/"
+      nuxtlink="/category/fashion/"
     ></HeaderSection>
     <SmallTechnology :data="data" totalViews="4"></SmallTechnology>
   </section>

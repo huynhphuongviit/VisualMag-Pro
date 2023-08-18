@@ -2,7 +2,7 @@
   <section class="blogging">
     <HeaderSection
       name="Blogging"
-      nuxtlink="https://demo.wpenjoy.com/visualmag-pro/category/blogging/"
+      nuxtlink="/category/blogging/"
     ></HeaderSection>
     <MediumContent :data="data"></MediumContent>
   </section>
@@ -10,10 +10,12 @@
 
 <script>
 import MediumContent from "./MediumContent.vue";
-import { dataBlogging } from "../store/dataHomePage";
+import {dataFake} from '../store/dataFake';
 export default {
   data() {
-    let data = dataBlogging;
+    //fetch data
+    let dataFilter = dataFake.filter((e) => e.categories.includes('blogging'))
+    let data = dataFilter?.slice(0, 3);
     return { data };
   },
   components: {

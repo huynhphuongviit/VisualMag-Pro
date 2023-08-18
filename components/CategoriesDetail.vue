@@ -2,7 +2,7 @@
   <section class="categories">
     <HeaderSection
       name="Categories"
-      nuxtlink="https://demo.wpenjoy.com/visualmag-pro/tag/wordpress/"
+      nuxtlink="/tag/wordpress/"
     ></HeaderSection>
     <ul class="categories__ul">
       <li class="categories__li" v-for="categories in data">

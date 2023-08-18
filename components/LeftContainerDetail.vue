@@ -15,7 +15,7 @@
         <p>Posted by</p>
         <p>{{ filterItem[0]?.name }}</p>
         <p>-</p>
-        <time>April 27, 2021</time>
+        <time>{{ this.$formatDate(new Date(filterItem[0]?.time), 'MMMM dd, yyyy') }}</time>
       </div>
       <figure>
         <img :src="filterItem[0]?.src" />
@@ -102,12 +102,6 @@ export default {
   data() {
     return {
       item: dataFake,
-      content: `
-        Đây là đoạn văn bản thứ nhất.
-
-        Đây là đoạn văn bản thứ hai,
-        được tách thành nhiều dòng.
-      `,
     };
   },
   computed: {

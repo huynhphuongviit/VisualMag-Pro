@@ -12,11 +12,11 @@
         <div style="color: #888888" class="smallcontent__container--content">
           <h2  class="smallcontent__container--h2">
             <NuxtLink
-              :to="smallContent.nuxtlink"
+              :to="'/'+formatParam(smallContent.title)"
               >{{ smallContent.title }}</NuxtLink
             >
           </h2>
-          <time datetime="2021-04-28T05:14:00+00:00">{{ smallContent.time }}</time>
+          <time >{{ formatDate(smallContent.time) }}</time>
         </div>
       </li>
      
@@ -24,8 +24,17 @@
 </template>
 
 <script>
+import { format } from 'date-fns';
 export default {
-  props: ['data']
+  props: ['data'],
+  methods: {
+    formatParam(param) {
+      return param.toLowerCase().replace(/[^a-z0-9]/g, "-");
+    },
+    formatDate(date) {
+      return format(new Date(date), 'MMMM dd, yyyy');
+    }
+  }
 };
 </script>
 <style>

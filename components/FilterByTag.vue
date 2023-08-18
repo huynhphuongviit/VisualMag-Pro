@@ -2,11 +2,11 @@
   <section class="filter">
     <HeaderSection
       name="Filter By Tag"
-      nuxtlink="https://demo.wpenjoy.com/visualmag-pro/tag/books/"
+      nuxtlink="/tag/books/"
     ></HeaderSection>
     <div class="filter__container--main">
       <NuxtLink
-        to="https://demo.wpenjoy.com/visualmag-pro/how-to-create-the-perfect-h1-tag-for-seo/"
+        to="/category/how-to-create-the-perfect-h1-tag-for-seo/"
       >
         <div class="filter__body">
           <img

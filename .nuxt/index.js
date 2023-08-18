@@ -15,6 +15,7 @@ import { createStore } from './store.js'
 
 import nuxt_plugin_plugin_77534129 from 'nuxt_plugin_plugin_77534129' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_bootstrapvue_7ce3bcfb from 'nuxt_plugin_bootstrapvue_7ce3bcfb' // Source: .\\bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_datefns_b42e7996 from 'nuxt_plugin_datefns_b42e7996' // Source: ..\\plugins\\date-fns.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -218,6 +219,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_bootstrapvue_7ce3bcfb === 'function') {
     await nuxt_plugin_bootstrapvue_7ce3bcfb(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_datefns_b42e7996 === 'function') {
+    await nuxt_plugin_datefns_b42e7996(app.context, inject)
   }
 
   // Lock enablePreview in context

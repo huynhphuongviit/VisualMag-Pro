@@ -1,6 +1,6 @@
 <template>
   <div>
-    detail/đà
+    page tags not found 404
   </div>
 </template>
 <script>

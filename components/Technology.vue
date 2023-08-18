@@ -1,6 +1,6 @@
 <template>
   <section class="technology">
-    <HeaderSection name="Technology" nuxtlink="https://demo.wpenjoy.com/visualmag-pro/category/technology/"></HeaderSection>
+    <HeaderSection name="Technology" nuxtlink="/category/technology/"></HeaderSection>
     <SmallTechnology :data="data" totalViews=5
       ></SmallTechnology
     >

@@ -1,7 +1,4 @@
 {
-  "Advertising": {
-    "description": "Auto imported from components/Advertising.vue"
-  },
   "AlbumImages": {
     "description": "Auto imported from components/AlbumImages.vue"
   },
@@ -85,9 +82,6 @@
   },
   "Technology": {
     "description": "Auto imported from components/Technology.vue"
-  },
-  "WebDesign": {
-    "description": "Auto imported from components/WebDesign.vue"
   },
   "WordPress": {
     "description": "Auto imported from components/WordPress.vue"

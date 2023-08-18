@@ -1,12 +1,21 @@
 <template>
   <h1 class="header__section">
-    <NuxtLink :to="'/'+nuxtlink">{{ name }}</NuxtLink>
+    <NuxtLink :to="nuxtlink">{{ formatText(name) }}</NuxtLink>
   </h1>
 </template>
 
 <script>
 export default {
-  props: ["name",'nuxtlink']
+  props: ["name", "nuxtlink"],
+  methods: {
+    formatText: (value) => {
+      if (!value) return "";
+      return value
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+    },
+  },
 };
 </script>
 <style>

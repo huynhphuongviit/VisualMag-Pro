@@ -1,6 +1,6 @@
 <template>
   <section class="recent__posts">
-    <HeaderSection name="Recent Posts" nuxtlink="https://demo.wpenjoy.com/visualmag-pro/tag/wordpress/"></HeaderSection>
+    <HeaderSection name="Recent Posts" nuxtlink="/tag/wordpress/"></HeaderSection>
     <SmallContentWithImages :data="data"></SmallContentWithImages>
   </section>
 </template>
@@ -8,10 +8,10 @@
 <script>
 import SmallContentWithImages from './SmallContentWithImages.vue';
 import HeaderSection from './HeaderSection.vue';
-import {dataWordPress} from '../store/dataHomePage'
+import {dataFake} from '../store/dataFake'
 export default {
   data(){
-    let data = dataWordPress
+    let data = dataFake.slice(0, 4)
     return{
       data
     }

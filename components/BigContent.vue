@@ -6,7 +6,7 @@
     <div class="bigcontent__body__content">
       <div class="content__info d-flex align-items-center">
         <h2>{{ data?.name }}</h2>
-        <time>{{ data?.time }}</time>
+        <time>{{ formatDate(data?.time) }}</time>
       </div>
       <h3>
         <NuxtLink :to="'/'+formatParam(data?.title)">{{ data?.title }}</NuxtLink>
@@ -19,11 +19,15 @@
 </template>
 
 <script>
+import { format } from 'date-fns';
 export default {
   props: ["data"],
   methods: {
     formatParam(param) {
       return param.toLowerCase().replace(/[^a-z0-9]/g, "-");
+    },
+    formatDate(date) {
+      return format(new Date(date), 'MMMM dd, yyyy');
     }
   }
 };

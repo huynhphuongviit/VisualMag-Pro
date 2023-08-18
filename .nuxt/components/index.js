@@ -1,4 +1,3 @@
-export const Advertising = () => import('../..\\components\\Advertising.vue' /* webpackChunkName: "components/advertising" */).then(c => wrapFunctional(c.default || c))
 export const AlbumImages = () => import('../..\\components\\AlbumImages.vue' /* webpackChunkName: "components/album-images" */).then(c => wrapFunctional(c.default || c))
 export const Banner = () => import('../..\\components\\Banner.vue' /* webpackChunkName: "components/banner" */).then(c => wrapFunctional(c.default || c))
 export const BigContent = () => import('../..\\components\\BigContent.vue' /* webpackChunkName: "components/big-content" */).then(c => wrapFunctional(c.default || c))
@@ -27,7 +26,6 @@ export const SmallTechnology = () => import('../..\\components\\SmallTechnology.
 export const SocialMedia = () => import('../..\\components\\SocialMedia.vue' /* webpackChunkName: "components/social-media" */).then(c => wrapFunctional(c.default || c))
 export const TagsDetail = () => import('../..\\components\\TagsDetail.vue' /* webpackChunkName: "components/tags-detail" */).then(c => wrapFunctional(c.default || c))
 export const Technology = () => import('../..\\components\\Technology.vue' /* webpackChunkName: "components/technology" */).then(c => wrapFunctional(c.default || c))
-export const WebDesign = () => import('../..\\components\\WebDesign.vue' /* webpackChunkName: "components/web-design" */).then(c => wrapFunctional(c.default || c))
 export const WordPress = () => import('../..\\components\\WordPress.vue' /* webpackChunkName: "components/word-press" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607

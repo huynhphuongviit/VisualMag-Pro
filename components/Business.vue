@@ -1,6 +1,6 @@
 <template>
   <section class="business">
-    <HeaderSection name="Business" nuxtlink="https://demo.wpenjoy.com/visualmag-pro/category/news/"></HeaderSection>
+    <HeaderSection name="Business" nuxtlink="/category/news/"></HeaderSection>
     <MediumContent :data="data"></MediumContent>
   </section>
 </template>
