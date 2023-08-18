@@ -1,7 +1,7 @@
 <template>
   <section class="technology">
     <HeaderSection name="Technology" nuxtlink="https://demo.wpenjoy.com/visualmag-pro/category/technology/"></HeaderSection>
-    <SmallTechnology :data="data"
+    <SmallTechnology :data="data" totalViews=5
       ></SmallTechnology
     >
   </section>
@@ -10,10 +10,11 @@
 <script>
 import SmallTechnology from "./SmallTechnology.vue";
 import HeaderSection from "./HeaderSection.vue";
-import {dataTechnology} from '../store/dataHomePage.js'
+import {dataFake} from '../store/dataFake.js'
 export default {
   data() {
-    let data = dataTechnology
+    //fetch data
+    let data = dataFake
     return { data };
   },
   components: {

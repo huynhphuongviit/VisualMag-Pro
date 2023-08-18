@@ -1,7 +1,10 @@
 <template>
   <div class="container__default">
     <Header></Header>
-    <nuxt />
+    <main class="d-flex main__detail">
+      <nuxt class="right__Container__detail" style="width: 66.66%" />
+      <RightContainerDetail  class="left__Container__detail" style="width: 33.33%"></RightContainerDetail>
+    </main>
     <Footer></Footer>
     <button
       @click="scrollToTop"
@@ -14,10 +17,12 @@
 <script>
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
+import RightContainerDetail from "../components/RightContainerDetail.vue";
 export default {
   components: {
     Footer,
     Header,
+    RightContainerDetail,
   },
   data() {
     return {
@@ -56,6 +61,12 @@ export default {
 .container__default a:hover {
   color: #0099e5;
 }
+.main__detail {
+  max-width: 1180px;
+  display: flex;
+  gap: 2rem;
+  margin: 24px auto 0 auto;
+}
 .btn__scroll {
   position: fixed;
   bottom: 10px;
@@ -86,5 +97,15 @@ export default {
   text-decoration: none;
   cursor: pointer;
   color: #000;
+}
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .left__Container__detail,
+  .right__Container__detail{
+    width: 100%!important;
+  }
 }
 </style>

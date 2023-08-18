@@ -2,18 +2,16 @@
   <header>
     <div class="header__pc">
       <b-navbar class="d-flex justify-content-between">
-        <img
-          alt=""
-          src="https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2023/02/logo-1.png"
-        />
+        <NuxtLink to="/">
+          <img
+            alt=""
+            src="https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2023/02/logo-1.png"
+          />
+        </NuxtLink>
         <div class="d-flex justify-content-between">
           <b-navbar-nav>
-            <b-nav-item
-              href="link.link"
-              v-for="link in links"
-              :key="link.index"
-            >
-              <NuxtLink :to="link.nuxtlink">{{ link.name }}</NuxtLink>
+            <b-nav-item v-for="link in links" :key="link.index">
+              <NuxtLink :to="link?.nuxtlink">{{ link.name }}</NuxtLink>
             </b-nav-item>
           </b-navbar-nav>
           <b-navbar-nav
@@ -41,36 +39,34 @@ import HeaderMobile from "../components/HeaderMobile.vue";
 export default {
   data: () => {
     let links = [
-      { name: "Home", nuxtlink: "#" },
+      { name: "Home", nuxtlink: "/" },
       {
         name: "Advertising",
-        nuxtlink:
-          "https://demo.wpenjoy.com/visualmag-pro/category/advertising/",
+        nuxtlink: "/category/advertising/",
       },
       {
         name: "Blogging",
-        nuxtlink: "https://demo.wpenjoy.com/visualmag-pro/category/blogging/",
+        nuxtlink: "/category/blogging/",
       },
       {
         name: "Marketing",
-        nuxtlink: "https://demo.wpenjoy.com/visualmag-pro/category/marketing/",
+        nuxtlink: "/category/marketing/",
       },
       {
         name: "Social",
-        nuxtlink:
-          "https://demo.wpenjoy.com/visualmag-pro/category/social-media/",
+        nuxtlink: "/category/social-media/",
       },
       {
         name: "SEO",
-        nuxtlink: "https://demo.wpenjoy.com/visualmag-pro/category/seo/",
+        nuxtlink: "/category/seo/",
       },
       {
         name: "Web Design",
-        nuxtlink: "https://demo.wpenjoy.com/visualmag-pro/category/web-design/",
+        nuxtlink: "/category/web-design/",
       },
       {
         name: "Tech",
-        nuxtlink: "https://demo.wpenjoy.com/visualmag-pro/category/technology/",
+        nuxtlink: "/category/technology/",
       },
     ];
     return {
@@ -183,7 +179,6 @@ header img {
   }
   .navbar-light .navbar-nav .nav-link {
     padding: 10px 0 10px 12px;
-}
-
+  }
 }
 </style>

@@ -1,29 +1,32 @@
 <template>
   <ul class="mediumcontent__ul">
-    <li class="d-flex flex-column mediumcontent__li" v-for="mediumItem in data">
-      <a
-        :to="mediumItem.nuxtlink"
-      >
+    <li
+      class="d-flex flex-column mediumcontent__li"
+      v-for="(mediumItem, index) in data"
+      :key="index"
+    >
+      <NuxtLink :to="'/' + formatParam(mediumItem.title)">
         <figure class="mediumcontent__figure">
-          <img
-            :src="mediumItem.src"
-            alt=""
-            loading="lazy"
-          />
+          <img :src="mediumItem.src" alt="" loading="lazy" />
         </figure>
         <div class="mediumcontent__content">
           <h2 style="margin-bottom: 5px" class="mediumcontent__h2">
-            <a :href="mediumItem.nuxtlink"> {{ mediumItem.title }}</a>
+            {{ mediumItem.title }}
           </h2>
         </div>
-      </a>
+      </NuxtLink>
     </li>
   </ul>
 </template>
 
 <script>
 export default {
-  props: ["data"]
+  props: ["data"],
+  methods: {
+    formatParam(param) {
+      return param.toLowerCase().replace(/[^a-z0-9]/g, "-");
+    },
+  },
 };
 </script>
 <style>
@@ -36,14 +39,14 @@ export default {
   list-style: none;
   margin-top: 24px;
 }
-.mediumcontent__li{
-  width:calc(100% - 50% - 0.625em);
+.mediumcontent__li {
+  width: calc(100% - 50% - 0.625em);
 }
 .mediumcontent__li a {
   color: #000;
   text-decoration: none;
 }
-.mediumcontent__li figure{
+.mediumcontent__li figure {
   width: 100%;
   margin: 0 0 10px 0;
 }

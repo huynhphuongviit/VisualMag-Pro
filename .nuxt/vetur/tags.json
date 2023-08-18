@@ -17,6 +17,9 @@
   "Business": {
     "description": "Auto imported from components/Business.vue"
   },
+  "CategoriesDetail": {
+    "description": "Auto imported from components/CategoriesDetail.vue"
+  },
   "Content": {
     "description": "Auto imported from components/Content.vue"
   },
@@ -41,6 +44,12 @@
   "HeaderSection": {
     "description": "Auto imported from components/HeaderSection.vue"
   },
+  "LeftContainerCategory": {
+    "description": "Auto imported from components/LeftContainerCategory.vue"
+  },
+  "LeftContainerDetail": {
+    "description": "Auto imported from components/LeftContainerDetail.vue"
+  },
   "Lifestyle": {
     "description": "Auto imported from components/Lifestyle.vue"
   },
@@ -53,8 +62,14 @@
   "News": {
     "description": "Auto imported from components/News.vue"
   },
+  "RecentPosts": {
+    "description": "Auto imported from components/RecentPosts.vue"
+  },
   "Reviews": {
     "description": "Auto imported from components/Reviews.vue"
+  },
+  "RightContainerDetail": {
+    "description": "Auto imported from components/RightContainerDetail.vue"
   },
   "SmallContentWithImages": {
     "description": "Auto imported from components/SmallContentWithImages.vue"
@@ -64,6 +79,9 @@
   },
   "SocialMedia": {
     "description": "Auto imported from components/SocialMedia.vue"
+  },
+  "TagsDetail": {
+    "description": "Auto imported from components/TagsDetail.vue"
   },
   "Technology": {
     "description": "Auto imported from components/Technology.vue"

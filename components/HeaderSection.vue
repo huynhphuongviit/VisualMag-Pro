@@ -1,15 +1,12 @@
 <template>
   <h1 class="header__section">
-    <a
-      :href="nuxtlink"
-      >{{ name }}</a
-    >
+    <NuxtLink :to="'/'+nuxtlink">{{ name }}</NuxtLink>
   </h1>
 </template>
 
 <script>
 export default {
-  props: ['name','nuxtlink']
+  props: ["name",'nuxtlink']
 };
 </script>
 <style>
@@ -38,5 +35,4 @@ export default {
   padding: 7px 0;
   font-weight: 700;
 }
-
 </style>

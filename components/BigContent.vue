@@ -1,15 +1,15 @@
 <template>
   <section class="bigcontent__body">
-    <a :href="data.nuxtlink">
-      <img :src="data.src" alt="" />
-    </a>
+    <NuxtLink :to="'/'+formatParam(data.title)">
+      <img :src="data?.src" alt="" />
+    </NuxtLink>
     <div class="bigcontent__body__content">
       <div class="content__info d-flex align-items-center">
-        <h2>{{ data.name }}</h2>
-        <time>{{ data.time }}</time>
+        <h2>{{ data?.name }}</h2>
+        <time>{{ data?.time }}</time>
       </div>
       <h3>
-        <a :href="data.nuxtlink">{{ data.title }}</a>
+        <NuxtLink :to="'/'+formatParam(data?.title)">{{ data?.title }}</NuxtLink>
       </h3>
     </div>
     <h4 v-if="data.description">
@@ -21,6 +21,11 @@
 <script>
 export default {
   props: ["data"],
+  methods: {
+    formatParam(param) {
+      return param.toLowerCase().replace(/[^a-z0-9]/g, "-");
+    }
+  }
 };
 </script>
 <style>

@@ -1,16 +1,14 @@
 <template>
   <div>
-    <Content></Content>
+    page not found 404
   </div>
 </template>
 
 <script>
-import Content from "../components/Content.vue";
 
 export default {
-  layout: "default",
+  layout: "detail",
   components: {
-    Content,
   },
 };
 </script>

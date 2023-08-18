@@ -1,14 +1,18 @@
 <template>
   <div class="header__mobile">
     <b-navbar toggleable="lg" class="d-flex justify-content-between">
-      <img
-        alt=""
-        src="https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2023/02/logo-1.png"
-      />
+      <NuxtLink to="/">
+        <img
+          alt=""
+          src="https://demo.wpenjoy.com/visualmag-pro/wp-content/uploads/sites/55/2023/02/logo-1.png"
+        />
+      </NuxtLink>
       <b-navbar-nav v-if="showList">
-        <b-nav-item href="link.link" v-for="link in links" key="index">{{
+        <b-nav-item :href="link.link" v-for="link in links" key="index">
+        {{
           link.name
-        }}</b-nav-item>
+        }}
+        </b-nav-item>
       </b-navbar-nav>
       <button
         v-if="!showList"
@@ -33,13 +37,13 @@ export default {
   data: () => {
     let links = [
       { name: "Home", link: "#" },
-      { name: "Advertising", link: "" },
-      { name: "Blogging", link: "" },
-      { name: "Marketing", link: "" },
-      { name: "Social", link: "" },
-      { name: "SEO", link: "" },
-      { name: "Web Design", link: "" },
-      { name: "Tech", link: "" },
+      { name: "Advertising", link: "/category/advertising" },
+      { name: "Blogging", link: "/category/blogging" },
+      { name: "Marketing", link: "/category/marketing" },
+      { name: "Social", link: "/category/social-media" },
+      { name: "SEO", link: "/category/seo" },
+      { name: "Web Design", link: "/category/web-design" },
+      { name: "Tech", link: "/category/technology" },
     ];
     return {
       links,
@@ -59,7 +63,7 @@ export default {
 };
 </script>
 <style>
-.no-scroll{
+.no-scroll {
   overflow: hidden;
 }
 @media screen and (max-width: 959px) {

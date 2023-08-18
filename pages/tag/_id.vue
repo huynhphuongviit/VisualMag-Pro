@@ -1,16 +1,13 @@
 <template>
   <div>
-    <Content></Content>
+    detail/đà
   </div>
 </template>
-
 <script>
-import Content from "../components/Content.vue";
 
 export default {
-  layout: "default",
+  layout: "detail",
   components: {
-    Content,
   },
 };
 </script>

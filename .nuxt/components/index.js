@@ -1,28 +1,34 @@
-export const Advertising = () => import('../..\\components\\Advertising.vue' /* webpackChunkName: "components/advertising" */).then(c => wrapFunctional(c.default || c))
-export const AlbumImages = () => import('../..\\components\\AlbumImages.vue' /* webpackChunkName: "components/album-images" */).then(c => wrapFunctional(c.default || c))
-export const Banner = () => import('../..\\components\\Banner.vue' /* webpackChunkName: "components/banner" */).then(c => wrapFunctional(c.default || c))
-export const BigContent = () => import('../..\\components\\BigContent.vue' /* webpackChunkName: "components/big-content" */).then(c => wrapFunctional(c.default || c))
-export const Blogging = () => import('../..\\components\\Blogging.vue' /* webpackChunkName: "components/blogging" */).then(c => wrapFunctional(c.default || c))
-export const Business = () => import('../..\\components\\Business.vue' /* webpackChunkName: "components/business" */).then(c => wrapFunctional(c.default || c))
-export const Content = () => import('../..\\components\\Content.vue' /* webpackChunkName: "components/content" */).then(c => wrapFunctional(c.default || c))
-export const Fashion = () => import('../..\\components\\Fashion.vue' /* webpackChunkName: "components/fashion" */).then(c => wrapFunctional(c.default || c))
-export const FilterByTag = () => import('../..\\components\\FilterByTag.vue' /* webpackChunkName: "components/filter-by-tag" */).then(c => wrapFunctional(c.default || c))
-export const FollowUs = () => import('../..\\components\\FollowUs.vue' /* webpackChunkName: "components/follow-us" */).then(c => wrapFunctional(c.default || c))
-export const Footer = () => import('../..\\components\\Footer.vue' /* webpackChunkName: "components/footer" */).then(c => wrapFunctional(c.default || c))
-export const Header = () => import('../..\\components\\Header.vue' /* webpackChunkName: "components/header" */).then(c => wrapFunctional(c.default || c))
-export const HeaderMobile = () => import('../..\\components\\HeaderMobile.vue' /* webpackChunkName: "components/header-mobile" */).then(c => wrapFunctional(c.default || c))
-export const HeaderSection = () => import('../..\\components\\HeaderSection.vue' /* webpackChunkName: "components/header-section" */).then(c => wrapFunctional(c.default || c))
-export const Lifestyle = () => import('../..\\components\\Lifestyle.vue' /* webpackChunkName: "components/lifestyle" */).then(c => wrapFunctional(c.default || c))
-export const Marketing = () => import('../..\\components\\Marketing.vue' /* webpackChunkName: "components/marketing" */).then(c => wrapFunctional(c.default || c))
-export const MediumContent = () => import('../..\\components\\MediumContent.vue' /* webpackChunkName: "components/medium-content" */).then(c => wrapFunctional(c.default || c))
-export const News = () => import('../..\\components\\News.vue' /* webpackChunkName: "components/news" */).then(c => wrapFunctional(c.default || c))
-export const Reviews = () => import('../..\\components\\Reviews.vue' /* webpackChunkName: "components/reviews" */).then(c => wrapFunctional(c.default || c))
-export const SmallContentWithImages = () => import('../..\\components\\SmallContentWithImages.vue' /* webpackChunkName: "components/small-content-with-images" */).then(c => wrapFunctional(c.default || c))
-export const SmallTechnology = () => import('../..\\components\\SmallTechnology.vue' /* webpackChunkName: "components/small-technology" */).then(c => wrapFunctional(c.default || c))
-export const SocialMedia = () => import('../..\\components\\SocialMedia.vue' /* webpackChunkName: "components/social-media" */).then(c => wrapFunctional(c.default || c))
-export const Technology = () => import('../..\\components\\Technology.vue' /* webpackChunkName: "components/technology" */).then(c => wrapFunctional(c.default || c))
-export const WebDesign = () => import('../..\\components\\WebDesign.vue' /* webpackChunkName: "components/web-design" */).then(c => wrapFunctional(c.default || c))
-export const WordPress = () => import('../..\\components\\WordPress.vue' /* webpackChunkName: "components/word-press" */).then(c => wrapFunctional(c.default || c))
+export { default as Advertising } from '../..\\components\\Advertising.vue'
+export { default as AlbumImages } from '../..\\components\\AlbumImages.vue'
+export { default as Banner } from '../..\\components\\Banner.vue'
+export { default as BigContent } from '../..\\components\\BigContent.vue'
+export { default as Blogging } from '../..\\components\\Blogging.vue'
+export { default as Business } from '../..\\components\\Business.vue'
+export { default as CategoriesDetail } from '../..\\components\\CategoriesDetail.vue'
+export { default as Content } from '../..\\components\\Content.vue'
+export { default as Fashion } from '../..\\components\\Fashion.vue'
+export { default as FilterByTag } from '../..\\components\\FilterByTag.vue'
+export { default as FollowUs } from '../..\\components\\FollowUs.vue'
+export { default as Footer } from '../..\\components\\Footer.vue'
+export { default as Header } from '../..\\components\\Header.vue'
+export { default as HeaderMobile } from '../..\\components\\HeaderMobile.vue'
+export { default as HeaderSection } from '../..\\components\\HeaderSection.vue'
+export { default as LeftContainerCategory } from '../..\\components\\LeftContainerCategory.vue'
+export { default as LeftContainerDetail } from '../..\\components\\LeftContainerDetail.vue'
+export { default as Lifestyle } from '../..\\components\\Lifestyle.vue'
+export { default as Marketing } from '../..\\components\\Marketing.vue'
+export { default as MediumContent } from '../..\\components\\MediumContent.vue'
+export { default as News } from '../..\\components\\News.vue'
+export { default as RecentPosts } from '../..\\components\\RecentPosts.vue'
+export { default as Reviews } from '../..\\components\\Reviews.vue'
+export { default as RightContainerDetail } from '../..\\components\\RightContainerDetail.vue'
+export { default as SmallContentWithImages } from '../..\\components\\SmallContentWithImages.vue'
+export { default as SmallTechnology } from '../..\\components\\SmallTechnology.vue'
+export { default as SocialMedia } from '../..\\components\\SocialMedia.vue'
+export { default as TagsDetail } from '../..\\components\\TagsDetail.vue'
+export { default as Technology } from '../..\\components\\Technology.vue'
+export { default as WebDesign } from '../..\\components\\WebDesign.vue'
+export { default as WordPress } from '../..\\components\\WordPress.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

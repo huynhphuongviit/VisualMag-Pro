@@ -16,7 +16,6 @@ export default {
       { href: "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kumbh+Sans:wght@100;300;400;500;600;700;800;900&display=swap", rel: "stylesheet" }
     ]
   },
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -30,7 +29,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    
+
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -42,5 +41,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  layouts: {
+    default: '~/layouts/default.vue',
+    detail: '~/layouts/detail.vue'
   }
 }

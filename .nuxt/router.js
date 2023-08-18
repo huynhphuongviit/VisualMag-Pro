@@ -4,7 +4,12 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _6a870348 = () => interopDefault(import('..\\pages\\category\\index.vue' /* webpackChunkName: "pages/category/index" */))
+const _539d05e0 = () => interopDefault(import('..\\pages\\tag\\index.vue' /* webpackChunkName: "pages/tag/index" */))
 const _61e9fd9a = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _d6633078 = () => interopDefault(import('..\\pages\\category\\_id.vue' /* webpackChunkName: "pages/category/_id" */))
+const _74730048 = () => interopDefault(import('..\\pages\\tag\\_id.vue' /* webpackChunkName: "pages/tag/_id" */))
+const _49a2c426 = () => interopDefault(import('..\\pages\\_params.vue' /* webpackChunkName: "pages/_params" */))
 
 const emptyFn = () => {}
 
@@ -18,9 +23,29 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/category",
+    component: _6a870348,
+    name: "category"
+  }, {
+    path: "/tag",
+    component: _539d05e0,
+    name: "tag"
+  }, {
     path: "/",
     component: _61e9fd9a,
     name: "index"
+  }, {
+    path: "/category/:id",
+    component: _d6633078,
+    name: "category-id"
+  }, {
+    path: "/tag/:id",
+    component: _74730048,
+    name: "tag-id"
+  }, {
+    path: "/:params",
+    component: _49a2c426,
+    name: "params"
   }],
 
   fallback: false

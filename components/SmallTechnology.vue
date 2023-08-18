@@ -1,22 +1,26 @@
 <template>
   <ul class="technology__container--ul">
     <li
-      v-for="item in data"
-      key="index"
+      v-for="(item , index) in data"
+      v-if="index < totalViews"
+      :key="item.id"
       class="d-flex technology__container--li"
+      @click="selectItem(item.title)"
     >
       <figure class="technology__container--figure">
         <img :src="item.src" alt="" loading="lazy" />
       </figure>
       <div style="color: #888888" class="technology__container--content">
-        <h2 style="margin-bottom: 5px" class="technology__container--h2">
-          <NuxtLink :to="item.nuxtlink">{{ item.title }}</NuxtLink>
+        <h2 @click="selectItem(item.id)" style="margin-bottom: 5px" class="technology__container--h2">
+          <NuxtLink :to="'/'+ formatParam(item.title)" >{{
+            item.title
+          }}</NuxtLink>
         </h2>
         <div class="technology__container--info d-flex">
-          <p>{{ item.name }}</p>
-          <time datetime="2021-04-28T05:14:00+00:00">{{ item.time }}</time>
+          <p v-if="item.name">{{ item.name }}</p>
+          <time v-if="item.time" datetime="2021-04-28T05:14:00+00:00">{{ item.time }}</time>
         </div>
-        <h3>{{ item.description }}</h3>
+        <h3 v-if="item.description">{{ item.description }}</h3>
       </div>
     </li>
   </ul>
@@ -24,7 +28,15 @@
 
 <script>
 export default {
-  props: ["data"],
+  props: ["data","totalViews"],
+  methods: {
+    formatParam(param) {
+      return param.toLowerCase().replace(/[^a-z0-9]/g, "-");
+    },
+    selectItem(params) {
+      this.$router.push({ path:'/'+ this.formatParam(params) });
+    }
+  },
 };
 </script>
 <style>
